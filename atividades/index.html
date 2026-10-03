@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários e Tabelas</title>
+</head>
+<body>
+
+    <h2>Sistema de Gestão de Eventos do IFBA</h2>
+    <p>Bem-vindo ao sistema de gestão de eventos do IFBA - Campus Paulo Afonso
+        Bacharelado em Ciência da Computação</p>
+
+        <ul>
+            <li><a href="#">Evento</a></li>
+            <li><a href="#">Inscrição</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+
+
+    <h3>Proximos Eventos</h3>
+    <figure class="container-imagem">
+        <img src="faixada-ifba.jpg" alt="Faixada do IFBA">
+        <h5>Auditorio principal do Campus</h5>
+    </figure>
+
+    <h5>Confira abaixo a lista de eventos e a agenda completa em formato de tabela.
+        Para mais informações sobre cada evento, veja a 
+        <a href="#">seção sobre o projeto</a>
+    </h5>
+
+
+    <h3>Eventos com inscrições abertas</h3>
+    <ul>
+        <li>Semana da Computação 2026</li>
+        <li>Palestra: Introdução ao Desenvolvimento Web</li>
+        <li>Maratona de Programação IFBA</li>
+        <li>Semana Nacional de Ciência e Tecnologia do IFBA</li>
+    </ul>
+
+    <h3>Ordem de apresentação dos trabalhos</h3>
+    <ol>
+        <li>Abertura e boas-vindas</li>
+        <li>Apresentação dos projetos de extenção</li>
+        <li>Intervalo</li>
+        <li>Palestra convidada</li>
+        <li>Encerramento</li>
+    </ol>
+
+    <h3>Agenda Completa</h3>
+    <table border="1">
+    <caption>Eventos do Semestre 2026.2</caption>
+
+    <thead>
+        <tr>
+            <th>DATA</th>
+            <th>EVENTO</th>
+            <th>LOCAL</th>
+            <th>VAGAS</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>10/10/2026</td>
+            <td>Semana da Computação 2026</td>
+            <td>Auditorio principal</td>
+            <td>100</td>
+        </tr>
+
+        <tr>
+            <td>15/10/2026</td>
+            <td>Palestra: Introdução ao Desenvolvimento Web</td>
+            <td>Laboratório de Informática 3</td>
+            <td>30</td>
+        </tr>
+
+        <tr>
+            <td>20/10/2026</td>
+            <td>Maratona de Programação IFBA</td>
+            <td>Laboratório de Informática 2</td>
+            <td>30</td>
+        </tr>
+
+        <tr>
+            <td>28/10/2026</td>
+            <td>Semana Nacional de Ciência e Tecnologia do IFBA</td>
+            <td>Campus</td>
+            <td>Limitadas</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th colspan="4">Total de vagas ofertadas: 250</th>
+        </tr>
+    </tfoot>
+    </table>
+
+
+    <h2>Inscrição em Evento</h2>
+    <form action="destino.html" method="post">
+        <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <div class="campo">
+        <label>Nome completo:</label>
+        <input type="text" placeholder="Digite seu nome">
+        </div>
+        
+        <div class="campo">
+        <label>Email:</label>
+        <input type="email" placeholder="Digite seu email">
+        </div>
+       
+        <div class="campo">
+        <label>Matrícula:</label>
+        <input type="text" placeholder="Digite sua matrícula">
+        </div>
+        
+        <div class="campo">
+        <label>Data de Nascimento:</label>
+        <input type="date" placeholder="Digite sua data de nascimento">
+        </div>
+        </fieldset>
+        
+        <fieldset>
+        <legend>Dados da inscrição</legend>
+
+        <h4>Evento:</h4>
+        <select name="evento" id="evento">
+            <option value="semana-computacao">Semana da Computação 2026</option>
+            <option value="palestra-web">Palestra: Introdução ao Desenvolvimento Web</option>
+            <option value="maratona-programacao">Maratona de Programação IFBA</option>
+            <option value="semana-ciencia-tecnologia">Semana Nacional de Ciência e Tecnologia do IFBA</option>
+        </select>
+
+        <h4>Turno de Preferência</h4>
+        <input type="radio" id="interesses" name="interesses" value="Palestras"> Palestras <br>
+        <input type="radio" id="interesses" name="interesses" value="Minicursos"> Minicursos <br>
+        <input type="radio" id="interesses" name="interesses" value="Competicoes"> Competições <br>
+        
+        <h4>Interesses</h4>
+        <input type="checkbox" id="interesses" name="interesses" value="Palestras"> Palestras <br>
+        <input type="checkbox" id="interesses" name="interesses" value="Minicursos"> Minicursos <br>
+        <input type="checkbox" id="interesses" name="interesses" value="Competicoes"> Competições <br>
+    
+        <div class="campo">
+        <label><h4>Observações:</h4></label>
+        <textarea rows="4" placeholder="Alguma observação sobre sua inscrição?"></textarea>
+        </div>
+        </fieldset>
+    
+        <br><button type="submit">Confirmar inscrição</button>
+        <button type="reset">Limpar formulário</button>
+    </form>
+
+    <h2>Sobre o projeto</h2>
+    <p>O <b>Sistema de Gestão de Eventos</b> é o projeto integrador desenvolvido pelos alunos da disciplina de Tecnologia Web.
+    Ele reúne em um unico site, a divulgação e a inscrição em eventos promovidos pelo IFBA - Campus Paulo Afonso.
+    <p>"Um site simples, feito somente com HTML, CSS e JavaScript, pode resolver um problema real da comunidade acadêmica"</p>
+    <p>Para saber mais, acesse o <a href="#">repositório do projeto</a> ou entre em contato pelo email <i>eventos@ifba.edu.br</i>.</p>
+
+    <hr>
+    2026 IFBA - Campus Paulo Afonso - Bacharelado em Ciência da Computação. Todos os direitos reservados.
+
+</body>
+</html>
