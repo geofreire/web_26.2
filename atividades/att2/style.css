@@ -1,0 +1,297 @@
+
+:root {
+    --verde: #128540;
+    --verde-escuro: #0d6b32;
+    --verde-claro: #eaf5ee;
+    --cinza-borda: #d9d9d9;
+    --cinza-texto: #555;
+    --texto: #1a1a1a;
+
+    --fonte: "Inter", system-ui, Arial, sans-serif;
+    --fonte-titulo: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #161616;
+    color: var(--texto);
+    font-family: var(--fonte);
+    font-size: 14px;
+}
+
+.site {
+    width: 92%;
+    max-width: 1200px;
+    min-height: 92vh;
+    margin: 16px auto 34px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho {
+    height: 39px;
+    padding: 0 14.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--verde);
+    background-color: white;
+}
+
+.logo {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--verde);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--texto);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 7px 9px;
+    border-radius: 5px;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: var(--verde-escuro);
+    background-color: var(--verde-claro);
+}
+
+main {
+    flex: 1;
+}
+
+.apresentacao {
+    padding: 44px 14.5% 0;
+    min-height: 211px;
+    background: linear-gradient(
+        to bottom,
+        var(--verde-claro),
+        #ffffff
+    );
+}
+
+.apresentacao h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 26px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.apresentacao p {
+    color: var(--texto);
+    font-size: 11px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.botoes {
+    display: flex;
+    gap: 5px;
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30px;
+    padding: 7px 13px;
+    border: 1px solid var(--verde);
+    border-radius: 22px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.preenchido {
+    background-color: var(--verde);
+    color: white;
+}
+
+.preenchido:hover {
+    background-color: var(--verde-escuro);
+}
+
+.contorno {
+    background-color: white;
+    color: var(--verde-escuro);
+}
+
+.contorno:hover {
+    background-color: var(--verde-claro);
+}
+
+.eventos {
+    padding: 0 14.5% 35px;
+}
+
+.eventos h2 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.lista-eventos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.card {
+    min-width: 0;
+    min-height: 147px;
+    padding: 12px;
+    border: 1px solid var(--cinza-borda);
+    border-top: 3px solid var(--verde);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.categoria {
+    display: inline-block;
+    padding: 3px 6px;
+    margin-bottom: 6px;
+    border-radius: 12px;
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.card h3 {
+    font-size: 11px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.informacoes {
+    font-size: 10px;
+    line-height: 1.4;
+    color: var(--cinza-texto);
+    margin-bottom: 10px;
+}
+
+.acoes {
+    display: flex;
+    gap: 5px;
+    margin-top: auto;
+}
+
+.rodape {
+    min-height: 46px;
+    padding: 12px 14.5%;
+    display: flex;
+    align-items: center;
+    background-color: #10271b;
+    border-top: 3px solid var(--verde);
+    color: #c8d2cc;
+}
+
+.rodape p {
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .cabecalho {
+        padding: 0 6%;
+    }
+
+    .apresentacao,
+    .eventos {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .apresentacao h1 {
+        font-size: 23px;
+    }
+
+    .lista-eventos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rodape {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+@media (max-width: 550px) {
+    .site {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .cabecalho {
+        height: auto;
+        min-height: 55px;
+        padding: 10px 5%;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        font-size: 10px;
+        padding: 7px;
+    }
+
+    .apresentacao {
+        padding-top: 35px;
+        padding-bottom: 25px;
+    }
+
+    .apresentacao h1 {
+        font-size: 23px;
+    }
+
+    .quebra {
+        display: none;
+    }
+
+    .eventos {
+        padding-top: 10px;
+    }
+
+    .lista-eventos {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 145px;
+    }
+
+    .rodape {
+        margin-top: 25px;
+    }
+}
